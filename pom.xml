@@ -11,6 +11,8 @@
     <artifactId>voitures</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
+	<name>voitures</name>
+	<description>POC Voitures et Commentaire</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -93,11 +95,6 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.5.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${org.projectlombok.version}</version>
 		</dependency>
 		
 		<dependency>
