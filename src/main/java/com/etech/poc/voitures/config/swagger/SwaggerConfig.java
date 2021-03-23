@@ -36,13 +36,22 @@ public class SwaggerConfig {
 				.apis(RequestHandlerSelectors.basePackage("com.etech.poc.voitures.controller"))
 				.paths(PathSelectors.any())
 				.build()
-				.apiInfo(apiInfo());
+				.apiInfo(apiInfo())
+				.globalOperationParameters(
+						Arrays.asList(new ParameterBuilder()
+								.name("Authorization")
+								.defaultValue("Bearer {{Token}}")
+								.description("Authorization header")
+								.modelRef(new ModelRef("Token"))
+								.parameterType("header")
+								.required(false)
+								.build()));
 	}
 
 	private ApiInfo apiInfo() {
 		return new ApiInfo(
-                environment.getProperty("application.name") + " API",
-                environment.getProperty("application.description"),
+				environment.getProperty("application.name") + " API",
+				environment.getProperty("application.description"),
 				environment.getProperty("build.version") + " " + environment.getProperty("build.timestamp"),
 				"Terms of service",
 				new Contact("Aroniaina", "www.aroniaina.mg", "a.aroniaina.s.p@gmail.com"),

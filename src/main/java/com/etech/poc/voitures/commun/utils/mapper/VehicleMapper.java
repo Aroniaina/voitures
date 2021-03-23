@@ -15,8 +15,7 @@ public interface VehicleMapper {
 	VehicleDTO vehicleToDto(Vehicle vehicle);
 
 	Vehicle dtoToVehicle(VehicleDTO dto);
-	
-	
-    List<VehicleDTO> vehiclesToDtos(List<Vehicle> vehicles);
+
+	List<VehicleDTO> vehiclesToDtos(List<Vehicle> vehicles);
 
 }

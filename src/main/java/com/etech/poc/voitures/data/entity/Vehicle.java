@@ -18,7 +18,7 @@ public class Vehicle implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private Long id;
 	@Column(unique=true)
 	private String model;
 	private String mark;
@@ -33,11 +33,11 @@ public class Vehicle implements Serializable {
 		this.url = url;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

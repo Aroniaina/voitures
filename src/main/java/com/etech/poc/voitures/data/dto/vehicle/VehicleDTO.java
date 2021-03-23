@@ -1,6 +1,5 @@
 package com.etech.poc.voitures.data.dto.vehicle;
 
-import com.etech.poc.voitures.data.dto.commun.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
@@ -8,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * @author a.safidy
  */
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-public class VehicleDTO extends BaseDTO {
-	private Integer id;
+public class VehicleDTO {
+	private Long id;
 	private String model;
 	private String mark;
 	private String url;
@@ -23,11 +22,11 @@ public class VehicleDTO extends BaseDTO {
 		this.url = url;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

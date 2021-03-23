@@ -49,6 +49,8 @@ public class VehicleSAImpl implements VehicleSA {
 		Vehicle vehicle = vehicleRepository.findByModel(dto.getModel());
 		if (vehicle == null) {
 			vehicle = new Vehicle();
+		} else {
+			dto.setId(vehicle.getId());
 		}
 		vehicle = vehicleMapper.dtoToVehicle(dto);
 		vehicleRepository.save(vehicle);

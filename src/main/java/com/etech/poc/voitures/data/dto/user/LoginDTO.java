@@ -1,6 +1,5 @@
 package com.etech.poc.voitures.data.dto.user;
 
-import com.etech.poc.voitures.data.dto.commun.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
@@ -8,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * @author a.safidy
  */
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
-public class LoginDTO extends BaseDTO {
+public class LoginDTO {
 
 	public LoginDTO(String token) {
 		this.token = token;
